@@ -25,8 +25,11 @@ import numpy as np
 np.random.seed(42)
 data = pd.DataFrame(np.random.rand(100), columns=['Random Numbers'])
 
-def preview_data(df):
-    print(df.head())
+def preview_data(df, material):
+    head = df.head() # Get the first few rows of the DataFrame
+    description = df.describe()  # Get the descriptive statistics
+    return [material, description]
 
-preview_data(data)
+result = preview_data(data, "Random Number Data")
+print(result)
 ```
