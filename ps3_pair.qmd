@@ -1,6 +1,9 @@
 ---
 title: "30538 Problem Set 3: git pair"
+histogram
 author: "Zhuohao Yang"
+author: "Yue Wang"
+main
 format: 
   pdf:
     keep-tex: true
@@ -28,11 +31,12 @@ data = pd.DataFrame(np.random.rand(100), columns=['Random Numbers'])
 
 def preview_data(df):
     head = print(df.head())
+    description = df.describe()
     his = alt.Chart(df).mark_bar().encode(
       alt.X('Random Numbers:Q', title = 'Random Numbers'),
       y = 'count()'
     )
-    return [head, his]
+    return [head, description, his]
 
 preview_data(data)
 ```
