@@ -1,6 +1,9 @@
 ---
 title: "30538 Problem Set 3: git pair"
+merge_conflict_name_1
 author: "Zhuohao Yang"
+author: "Yue Wang"
+main
 format: 
   pdf:
     keep-tex: true
